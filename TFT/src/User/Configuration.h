@@ -68,12 +68,12 @@
 /**
  * Text displayed at the top of the TFT in Marlin Mode.
  */
-#define MARLIN_BANNER_TEXT "LCD12864 Simulator"
+#define MARLIN_BANNER_TEXT "Marlin Mode"
 
 /**
  * show banner text at the top of the TFT in Marlin Mode.
  */
-#define MARLIN_SHOW_BANNER  true //to enabled: true | to disabled: false
+#define MARLIN_SHOW_BANNER  false //to enabled: true | to disabled: false
 /**
  * Run Marlin Mode in Fullscreen
  *
@@ -105,7 +105,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 /**
  * Default Touch Mode Language
@@ -173,8 +173,8 @@
 #define FAN_CTRL_NUM 0    // set in 1~2
 
 #define PREHEAT_LABELS   {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
-#define PREHEAT_HOTEND   {200,   240,    230,   170,    220,   250}
-#define PREHEAT_BED      {60,    70,     90,    50,     50,    90}
+#define PREHEAT_HOTEND   {200,   230,    230,   170,    220,   250}
+#define PREHEAT_BED      {60,    80,     90,    50,     50,    90}
 
 #define HEAT_MAX_TEMP    {275,       275,       275,       275,       275,       275,       150,    60}   //max temperature can be set
 #define HEAT_SIGN_ID     {"T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:",     "B:",   "C:"}
@@ -238,26 +238,24 @@
 #define NOZZLE_PAUSE_M600_M601
 
 /**
- * Auto save/load Bed Leveling data
- * The TFT will auto detect if BL data are available.
+ * Auto Save Load Leveling Data
+ * The TFT will auto detect if Auto Bed Level is available.
  * Enable this will send "M500" after "G29" to store leveling value
  * and send "M420 S1" to enable leveling state after startup
- *
- * Options:  0: Disabled    1: Enabled
  */
-#define AUTO_SAVE_LOAD_BL_VALUE 1
+#define AUTO_SAVE_LOAD_LEVELING_VALUE false //to enabled: true | to disabled: false
 
 /**
- * Enable Bed Leveling options
- * Will attempt to auto detect and/or enable specific BL options.
+ * Enable Unified Bed Leveling options
+ * Will attempt to auto detect and enable specific UBL options.
  *
  * WARNING - If you're not sure, leave on auto-detect or disabled.
  *           UBL has extra options other leveling systems might not have.
  *
- * Options:  0: Disabled    1: Auto-detect [default]    2: ABL    3: BBL    4: UBL    5: MBL
+ * Options:  0: Disabled    1: Enabled    2: Auto-detect [default]
  *
  */
-#define ENABLE_BL_VALUE 1
+#define ENABLE_UBL_VALUE 2
 
 /**
  * Enable friendly probe offset language.
