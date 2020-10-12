@@ -62,7 +62,7 @@
  *          6: MAGENTA,    7: YELLOW,      8: ORANGE,  9: PURPLE,   10: LIME,  11: BROWN,
  *         12: DARKBLUE,  13: DARKGREEN,  14: GRAY,   15: DARKGRAY
  */
-#define MARLIN_BKCOLOR 1
+#define MARLIN_BKCOLOR 4
 #define MARLIN_FNCOLOR 0
 
 /**
@@ -73,7 +73,7 @@
 /**
  * show banner text at the top of the TFT in Marlin Mode.
  */
-#define MARLIN_SHOW_BANNER  false //to enabled: true | to disabled: false
+#define MARLIN_SHOW_BANNER  true //to enabled: true | to disabled: false
 /**
  * Run Marlin Mode in Fullscreen
  *
@@ -243,7 +243,7 @@
  * Enable this will send "M500" after "G29" to store leveling value
  * and send "M420 S1" to enable leveling state after startup
  */
-#define AUTO_SAVE_LOAD_LEVELING_VALUE false //to enabled: true | to disabled: false
+#define AUTO_SAVE_LOAD_LEVELING_VALUE true //to enabled: true | to disabled: false
 
 /**
  * Enable Unified Bed Leveling options
